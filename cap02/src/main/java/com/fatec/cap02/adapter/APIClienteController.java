@@ -24,7 +24,7 @@ public class APIClienteController {
 
 	@GetMapping
 	public ResponseEntity<List<Cliente>> consultaTodos() {
-		logger.info(">>>>>> 1. controller consulta todos chamado");
+		logger.info(">>>>>> controller consulta todos chamado");
 		List<Cliente> listaDeClientes = new ArrayList<Cliente>();
 		servico.consultaTodos().forEach(listaDeClientes::add);
 		if (listaDeClientes.isEmpty()) {
